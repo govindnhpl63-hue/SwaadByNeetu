@@ -126,93 +126,58 @@
             background: #b84300;
         }
 
-        .top-header {
-            display: flex;
-            align-items: center;
-            padding: 30px;
-            background: linear-gradient(90deg, #ff8c00, #ff9800);
+        .slider {
+            width: 75%;
+            max-width: 75%;
+            margin: 0 auto 20px auto;
         }
 
-        .logo-box {
-            background: #fff2dd;
-            padding: 10px;
-            border-radius: 20px;
-        }
-
-        .logo-box img {
-            width: 100px;
+        .slide {
+            width: 50%;
             height: auto;
+            display: none;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff3e0;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+
+        .slide.active {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .slide.active {
             display: block;
         }
 
-        .brand-text {
-            margin-left: 200px;
-            color: white;
+        .slide {
+            width: 50%;
+            border-radius: 12px;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .brand-text h1 {
-            font-size: 36px;
-            margin: 0;
-            font-weight: bold;
-        }
-
-        .brand-text p {
-            margin-top: 10px;
-            font-size: 16px;
-            opacity: 0.95;
-        }
-
-        /* NAV BAR */
-        .menu {
-            background: #ff9800;
-            padding: 12px 0;
-            text-align: center;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        .menu a:hover {
-            text-decoration: underline;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-            .top-header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .brand-text {
-                margin-left: 0;
-                margin-top: 20px;
-            }
-
-            .logo-box img {
-                width: 200px;
-            }
+        .slide.active {
+            display: block;
         }
     </style>
 </head>
 
 <body>
 
-    <header class="top-header">
-        <div class="logo-box">
-            <img src="Swaadbyneetu.png" alt="SwaadByNeetu Logo">
-        </div>
-
-        <div class="brand-text">
-            <h1>SwaadByNeetu</h1>
-            <p>Ghar Jaisa Khana – Healthy & Hygienic Tiffin Service</p>
+    <header style="display:flex;align-items:center;justify-content:center;gap:15px;flex-wrap:wrap;">
+        <img src="Swaadbyneetu.png" alt="SwaadByNeetu Logo" style="height:80px;width:auto;border-radius:12px;">
+        <div>
+            <h1 style="margin:0;">SwaadByNeetu</h1>
+            <p style="margin:5px 0 0;">Ghar Jaisa Khana – Healthy & Hygienic Tiffin Service</p>
         </div>
     </header>
 
-    <nav class="menu">
+    <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Tiffin Plans</a>
@@ -226,15 +191,14 @@
             SwaadByNeetu brings you delicious, home-style meals cooked with love.
             Perfect for students, office-goers, and families who miss ghar ka khana.
         </p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;margin-top:25px;">
-            <img src="img1.png" alt="Home made food"
-                style="width:100%;border-radius:20px;box-shadow:10px 4px 8px rgba(0,0,0,0.15);">
-            <img src="img2.png" alt="Healthy tiffin"
-                style="width:100%;border-radius:20px;box-shadow:10px 4px 8px rgba(0,0,0,0.15);">
-            <img src="img3.png" alt="Fresh lunch dinner"
-                style="width:100%;border-radius:20px;box-shadow:10px 4px 8px rgba(0,0,0,0.15);">
+        <div class="slider">
+            <img src="img...4.png" class="slide active">
+            <img src="img2.png" class="slide">
+            <img src="img3.png" class="slide">
+            <img src="img5.png" class="slide">
+            <img src="img1.png" class="slide">
         </div>
-        <a href="#contact" class="btn">Order Now</a>
+        <a href="#order" class="btn">Order Now</a>
     </section>
 
     <section class="section" id="about">
@@ -251,12 +215,12 @@
         <div class="services">
             <div class="card">
                 <h3>Monthly Tiffin (Lunch + Dinner)</h3>
-                <p style="font-size:18px;"><strong>₹4200 / Month</strong></p>
+                <p style="font-size:18px;"><strong>₹4800 / Month</strong></p>
                 <p>Fresh home-made lunch & dinner tiffin daily.</p>
             </div>
             <div class="card">
                 <h3>Monthly Tiffin (Only Lunch)</h3>
-                <p style="font-size:18px;"><strong>₹4500 / Month</strong></p>
+                <p style="font-size:18px;"><strong>₹2400/ Month</strong></p>
                 <p>Healthy and tasty lunch tiffin for working professionals.</p>
             </div>
             <div class="card">
@@ -279,15 +243,13 @@
         <h2>Contact Us</h2>
         <div class="contact">
             <p><strong>Business Name:</strong> SwaadByNeetu</p>
-            <p><strong>Phone:</strong> +91 XXXXXXXXXX</p>
-            <p><strong>WhatsApp:</strong> +91 XXXXXXXXXX</p>
+            <p><strong>Phone:</strong> +91 9521375410</p>
+            <p><strong>WhatsApp:</strong> +91 9521375410</p>
             <p><strong>Location:</strong> 4WV2+796, Sukhpura, Rajasthan</p>
             <p><strong>Coordinates:</strong> 25°08'35.4"N 75°54'03.2"E</p>
             <a href="https://www.google.com/maps?q=25.14317,75.90083" target="_blank" class="btn">Open in Google
                 Maps</a>
             <br><br>
-            <a href="https://wa.me/919521375410?text=Hi%20SwaadByNeetu%20%F0%9F%91%8B%0AI%20want%20to%20order%20tiffin.%0A%0APlan:%20Monthly%20/%20One%20Day%0AMeal:%20Lunch%20/%20Dinner%0AStart%20Date:%0AAddress:"
-                target="_blank" class="btn">Order on WhatsApp</a>
         </div>
     </section>
 
@@ -318,7 +280,7 @@
                 <h3>Regular Days (Mon–Sat)</h3>
                 <ul>
                     <li>2 Sabji</li>
-                    <li>Chawal / Salad</li>
+                    <li>Special</li>
                     <li>6 Roti</li>
                 </ul>
             </div>
@@ -357,14 +319,13 @@
         </div>
     </section>
     <footer>
-        <p>© 2025 SwaadByNeetu | Home Made Tiffin Service</p>
+        <p>© 2026 SwaadByNeetu | Home Made Tiffin Service</p>
         <p>
             Follow us on Instagram 👉
             <a href="https://www.instagram.com/swaadbyneetu" target="_blank"
                 style="color:#fff;text-decoration:underline;">@swaadbyneetu</a>
         </p>
     </footer>
-
     <script>
         // Send data to WhatsApp
         function sendWhatsApp() {
@@ -377,7 +338,7 @@
             window.open(`https://wa.me/919521375410?text=${msg}`, '_blank');
 
             // Send data to Google Sheet
-            fetch("https://script.google.com/macros/s/AKfycbz5agYUM1jljrX8Go6H8UT_dprCFiMBljjeZzlnPp4AIyRI3GPNsB_HtTlRkYniO2lG1g/exec", {
+            fetch('PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE', {
                 method: 'POST',
                 body: JSON.stringify({
                     name: name,
@@ -387,6 +348,18 @@
                 })
             });
         }
+    </script>
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide() {
+            slides.forEach(s => s.classList.remove('active'));
+            slides[index].classList.add('active');
+            index = (index + 1) % slides.length;
+        }
+
+        setInterval(showSlide, 3000);
     </script>
 </body>
 
